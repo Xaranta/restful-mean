@@ -1,0 +1,75 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to my Mongo Express Node example
+    a(href="http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/") this page was created with this tutorial
+
+    // Wrapper
+    #wrapper
+    
+    
+        // USER INFO
+        #userInfo
+            h2 User Info
+            p
+                strong Name:
+                |  <span id='userInfoName'></span>
+                br
+                strong Age:
+                |  <span id='userInfoAge'></span>
+                br
+                strong Gender:
+                |  <span id='userInfoGender'></span>
+                br
+                strong Location:
+                |  <span id='userInfoLocation'></span>
+    
+            h2 Update User
+            form(id="update" name="update")
+                input#updateUserName(type='text', value="", placeholder='Username', name="updateUserName")
+                br
+                input#updateUserEmail(type='text', value="", placeholder='Email')
+                br
+                input#updateUserFullName(type='text',value="", placeholder='Full Name')
+                br
+                input#updateUserAge(type='text', value="", placeholder='Age')
+                br
+                input#updateUserLocation(type='text', value="", placeholder='Location')
+                br
+                input#updateUserGender(type='text', value="", placeholder='gender')
+                br
+                button#btnUpdateUser(value="test") Update User
+        // /USER INFO
+
+
+        // USER LIST
+        h2 User List
+        #userList
+            table
+                thead
+                    th UserName
+                    th Email
+                    th Delete?
+                tbody
+        // /USER LIST
+        
+        
+        // ADD USER
+        h2 Add User
+        #addUser
+            form
+                input#inputUserName(type='text', placeholder='Username')
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                input#inputUserFullname(type='text', placeholder='Full Name')
+                input#inputUserAge(type='text', placeholder='Age')
+                br
+                input#inputUserLocation(type='text', placeholder='Location')
+                input#inputUserGender(type='text', placeholder='gender')
+                br
+                button#btnAddUser Add User
+        // /ADD USER
+
+    // /WRAPPER
+    
